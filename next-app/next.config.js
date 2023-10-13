@@ -4,9 +4,9 @@ const nextConfig = {}
 module.exports = nextConfig
 
 if(process.env.NODE_ENV === 'development') {
-    const { setupDevBindings } = require('@cloudflare/next-on-pages/dev-bindings');
+    const { setupDevBindings } = require('@cloudflare/next-on-pages/next-dev');
 
     setupDevBindings({
-        serviceBindings: { MY_SERVICE: "my-worker" },
+        services: { MY_SERVICE: "my-worker" },
     });
 }
